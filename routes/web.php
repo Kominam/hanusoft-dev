@@ -19,5 +19,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/index', function () {
-    return view('layouts.user.pages.index');
+    return view('user.index');
 })->name('index');
