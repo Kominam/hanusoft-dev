@@ -8,3 +8,7 @@ Homestead.yaml
 /public/css
 /public/js
 /composer.lock
+/public/user/css
+/public/user/js
+/public/user/vendor
+/public/vendor

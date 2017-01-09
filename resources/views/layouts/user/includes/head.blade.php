@@ -10,28 +10,29 @@
   <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 
   <!-- Vendor CSS -->
-  <link rel="stylesheet" href="{{url('frontend/vendor/bootstrap/bootstrap.css')}}">
-  <link rel="stylesheet" href="{{url('frontend/vendor/fontawesome/css/font-awesome.css')}}">
-  <link rel="stylesheet" href="{{url('frontend/vendor/owlcarousel/owl.carousel.min.css')}}" media="screen">
-  <link rel="stylesheet" href="{{url('frontend/vendor/owlcarousel/owl.theme.default.min.css')}}" media="screen">
-  <link rel="stylesheet" href="{{url('frontend/vendor/magnific-popup/magnific-popup.css')}}" media="screen">
+  {{ Html::style(config('hanusoft.paths.public_user.vendor').'bootstrap/bootstrap.css') }}
+  {{ Html::style(config('hanusoft.paths.public_user.vendor').'fontawesome/css/font-awesome.css') }}
+   <link rel="stylesheet" href="{{url(config('hanusoft.paths.public_user.vendor').'owlcarousel/owl.carousel.min.css')}}" media="screen">
+  <link rel="stylesheet" href="{{url(config('hanusoft.paths.public_user.vendor').'owlcarousel/owl.theme.default.min.css')}}" media="screen">
+  <link rel="stylesheet" href="{{url(config('hanusoft.paths.public_user.vendor').'magnific-popup/magnific-popup.css')}}" media="screen">
 
   <!-- Theme CSS -->
-  <link rel="stylesheet" href="{{url('frontend/css/theme.css')}}">
-  <link rel="stylesheet" href="{{url('frontend/css/theme-elements.css')}}">
-  <link rel="stylesheet" href="{{url('frontend/css/theme-blog.css')}}">
-  <link rel="stylesheet" href="{{url('frontend/css/theme-shop.css')}}">
-  <link rel="stylesheet" href="{{url('frontend/css/theme-animate.css')}}">
-
-  <!-- Skin CSS -->
-  <link rel="stylesheet" href="{{url('frontend/css/skins/default.css')}}">
+  <link rel="stylesheet" href="{{url(config('hanusoft.paths.public_user.css').'theme.css')}}">
+  <link rel="stylesheet" href="{{url(config('hanusoft.paths.public_user.css').'theme-elements.css')}}">
+  <link rel="stylesheet" href="{{url(config('hanusoft.paths.public_user.css').'theme-blog.css')}}">
+  <link rel="stylesheet" href="{{url(config('hanusoft.paths.public_user.css').'theme-shop.css')}}">
+  <link rel="stylesheet" href="{{url(config('hanusoft.paths.public_user.css').'theme-animate.css')}}">
 
   <!-- Theme Custom CSS -->
-  <link rel="stylesheet" href="{{url('frontend/css/custom.css')}}">
+  <link rel="stylesheet" href="{{url(config('hanusoft.paths.public_user.css').'custom.css')}}">
 
   <!-- Head Libs -->
-  <script src="{{url('frontend/vendor/modernizr/modernizr.js')}}"></script>
-
+  <script src="{{url(config('hanusoft.paths.public_user.vendor').'modernizr/modernizr.js')}}"></script>
+  <!--   Sweet Alert -->
   {{-- <link rel="stylesheet" href="{{ elixir('css/sweetalert.css') }}">
   <script src="{{ elixir('js/sweetalert.js') }}"></script> --}}
+  @stack('css')
+  @stack('style')
+  @stack('js-head')
+  @stack('script-head')
 </head>
