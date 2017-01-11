@@ -7,7 +7,7 @@ return [
         	'js' => 'user/js/',
         	'vendor' => 'user/vendor/',
         	'img' => 'user/img/'
-        ]
+        ],
+        'avatar_image' => 'user/avatar/'
     ],
-
 ];

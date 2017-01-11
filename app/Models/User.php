@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'bio', 'grade', 'major', 'avatar_image'
     ];
 
     /**
@@ -26,4 +26,19 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
+    public function skills()
+    {
+        return $this->belongsToMany(Skill::class)->withPivot('value');
+    }
+
+    public function getAvatarImage($value)
+    {
+        return config('hanusoft.paths.avatar_image').'$value';
+    }
 }

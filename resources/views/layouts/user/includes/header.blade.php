@@ -3,7 +3,7 @@
     <div class="logo">
       <a href="{{route('index')}}">
         <img alt="Hanusoft" width="111" height="54" data-sticky-width="82" data-sticky-height="40"
-        src="{{url('frontend/img/logo.png')}}">
+        src="{{url('user/img/logo.png')}}">
       </a>
     </div>
     <div class="search">
