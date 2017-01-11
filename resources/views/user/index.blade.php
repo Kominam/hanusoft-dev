@@ -5,13 +5,13 @@
     <div class="slider" id="revolutionSlider" data-plugin-revolution-slider data-plugin-options='{"startheight": 677}'>
       <ul>
         <li data-transition="fade" data-slotamount="10" data-masterspeed="300">
-          <img src="{{url('frontend/img/slides/hs-silder1.jpg')}}" data-bgfit="cover" data-bgposition="center" data-bgrepeat="no-repeat">
+          <img src="{{url('user/img/slides/hs-silder1.jpg')}}" data-bgfit="cover" data-bgposition="center" data-bgrepeat="no-repeat">
           <div class="tp-caption sft stb visible-lg"
             data-x="417"
             data-y="250"
             data-speed="300"
             data-start="1000"
-            data-easing="easeOutExpo"><img src="{{url('frontend/img/slides/slide-title-border.png')}}" alt=""></div>
+            data-easing="easeOutExpo"><img src="{{url('user/img/slides/slide-title-border.png')}}" alt=""></div>
           <div class="tp-caption top-label lfl stl"
             data-x="center" data-hoffset="0"
             data-y="250"
@@ -23,7 +23,7 @@
             data-y="250"
             data-speed="300"
             data-start="1000"
-            data-easing="easeOutExpo"><img src="{{url('frontend/img/slides/slide-title-border.png')}}" alt=""></div>
+            data-easing="easeOutExpo"><img src="{{url('user/img/slides/slide-title-border.png')}}" alt=""></div>
           <div class="tp-caption main-label sft stb"
             data-x="center" data-hoffset="0"
             data-y="280"
@@ -48,7 +48,7 @@
           </a>
         </li>
         <li data-transition="fade" data-slotamount="10" data-masterspeed="300">
-          <img src="{{url('frontend/img/slides/hs-silder1.jpg')}}" data-bgfit="cover" data-bgposition="right center" data-bgrepeat="no-repeat">
+          <img src="{{url('user/img/slides/hs-silder1.jpg')}}" data-bgfit="cover" data-bgposition="right center" data-bgrepeat="no-repeat">
           <div class="tp-caption featured-label sft stb"
             data-x="center"
             data-y="280"
@@ -110,7 +110,7 @@
   <div class="container">
     <div class="row center">
       <div class="col-md-12">
-        <img src="{{url('frontend/img/slides/hs-slider2.jpg')}}" class="img-responsive" data-appear-animation="fadeInUp" alt="hanusoft progress" style="margin: 45px 0px -35px;">
+        <img src="{{url('user/img/slides/hs-slider2.jpg')}}" class="img-responsive" data-appear-animation="fadeInUp" alt="hanusoft progress" style="margin: 45px 0px -35px;">
       </div>
     </div>
   </div>
@@ -314,7 +314,7 @@
                     <div class="testimonial-arrow-down"></div>
                     <div class="testimonial-author">
                       <div class="img-thumbnail img-thumbnail-small">
-                        <img src="{{url('frontend/img/founder.jpg')}}" alt="" width="120px" height="120px">
+                        <img src="{{url('user/img/founder.jpg')}}" alt="" width="120px" height="120px">
                       </div>
                       <p><strong>Trinh Bao Ngoc</strong><span>FIT-Vice</span></p>
                     </div>
@@ -328,7 +328,7 @@
                     <div class="testimonial-arrow-down"></div>
                     <div class="testimonial-author">
                       <div class="img-thumbnail img-thumbnail-small">
-                        <img src="{{url('frontend/img/founder.jpg')}}" alt="">
+                        <img src="{{url('user/img/founder.jpg')}}" alt="">
                       </div>
                       <p><strong>Trinh Bao Ngoc</strong><span>FIT - Vice</span></p>
                     </div>
@@ -359,7 +359,7 @@
   <li class="isotope-item">
     <div class="portfolio-item img-thumbnail">
       <a href="portfolio-single-project.html" class="thumb-info secundary">
-      <img alt="" class="img-responsive" src="{{url('frontend/img/projects/project.jpg')}}">
+      <img alt="" class="img-responsive" src="{{url('user/img/projects/project.jpg')}}">
       <span class="thumb-info-title">
       <span class="thumb-info-inner">SEO</span>
       <span class="thumb-info-type">Website</span>
@@ -373,7 +373,7 @@
   <li class="isotope-item">
     <div class="portfolio-item img-thumbnail">
       <a href="portfolio-single-project.html" class="thumb-info secundary">
-      <img alt="" class="img-responsive" src="{{url('frontend/img/projects/project-1.jpg')}}">
+      <img alt="" class="img-responsive" src="{{url('user/img/projects/project-1.jpg')}}">
       <span class="thumb-info-title">
       <span class="thumb-info-inner">Okler</span>
       <span class="thumb-info-type">Brand</span>
@@ -387,7 +387,7 @@
   <li class="isotope-item">
     <div class="portfolio-item img-thumbnail">
       <a href="portfolio-single-project.html" class="thumb-info secundary">
-      <img alt="" class="img-responsive" src="{{url('frontend/img/projects/project-7.jpg')}}">
+      <img alt="" class="img-responsive" src="{{url('user/img/projects/project-7.jpg')}}">
       <span class="thumb-info-title">
       <span class="thumb-info-inner">The Code</span>
       <span class="thumb-info-type">Website</span>
@@ -401,7 +401,7 @@
   <li class="isotope-item">
     <div class="portfolio-item img-thumbnail">
       <a href="portfolio-single-project.html" class="thumb-info secundary">
-      <img alt="" class="img-responsive" src="{{url('frontend/img/projects/project-4.jpg')}}">
+      <img alt="" class="img-responsive" src="{{url('user/img/projects/project-4.jpg')}}">
       <span class="thumb-info-title">
       <span class="thumb-info-inner">The Code</span>
       <span class="thumb-info-type">Website</span>
@@ -415,7 +415,7 @@
   <li class="isotope-item">
     <div class="portfolio-item img-thumbnail">
       <a href="portfolio-single-project.html" class="thumb-info secundary">
-      <img alt="" class="img-responsive" src="{{url('frontend/img/projects/project-5.jpg')}}">
+      <img alt="" class="img-responsive" src="{{url('user/img/projects/project-5.jpg')}}">
       <span class="thumb-info-title">
       <span class="thumb-info-inner">SEO</span>
       <span class="thumb-info-type">Website</span>
@@ -427,7 +427,7 @@
     </div>
   </li>
 </ul>
-<section class="parallax" data-stellar-background-ratio="0.5" style="background-image: url(frontend/img/parallax-image.jpg);">
+<section class="parallax" data-stellar-background-ratio="0.5" style="background-image: url(user/img/parallax-image.jpg);">
   <div class="container">
     <div class="row center">
       <div class="col-md-12 center">
@@ -436,7 +436,7 @@
           <div class="owl-carousel testimonials" data-plugin-options='{"items": 1}'>
             <div>
               <div class="col-md-12">
-                <img src="{{url('frontend/img/clients/client-1.jpg')}}" class="img-responsive img-circle" alt="">
+                <img src="{{url('user/img/clients/client-1.jpg')}}" class="img-responsive img-circle" alt="">
                 <blockquote class="testimonial-carousel">
                   <p>This theme is totally customizable, clean with all the options you could want. Don't want full screen layout? With one word added to the code the entire site becomes a boxed version.... The customer support is absolutely unsurpassed. Every question is answered with more help than anyone could expect for the price. Can not recommend this enough.</p>
                 </blockquote>
@@ -445,7 +445,7 @@
             </div>
             <div>
               <div class="col-md-12">
-                <img src="{{url('frontend/img/clients/client-1.jpg')}}" class="img-responsive img-circle" alt="">
+                <img src="{{url('user/img/clients/client-1.jpg')}}" class="img-responsive img-circle" alt="">
                 <blockquote class="testimonial-carousel">
                   <p>Excellent customer support. I had a minor issue with getting the contact form to work and I was provided with a solution within 8 hours and over the weekend. </p>
                 </blockquote>
@@ -454,7 +454,7 @@
             </div>
             <div>
               <div class="col-md-12">
-                <img src="{{url('frontend/img/clients/client-1.jpg')}}" class="img-responsive img-circle" alt="">
+                <img src="{{url('user/img/clients/client-1.jpg')}}" class="img-responsive img-circle" alt="">
                 <blockquote class="testimonial-carousel">
                   <p>Outstanding about everything : - Support is fast and perfect : I got answers to every questions I asked. - Code quality is up to date, modern, structured, clear, easy to understand. </p>
                 </blockquote>
@@ -488,25 +488,25 @@
   <div class="row center push-top">
     <div class="owl-carousel" data-plugin-options='{"items": 6, "autoplay": true, "autoplayTimeout": 3000}'>
       <div>
-        <img class="img-responsive" src="{{url('frontend/img/partner/codelover.png')}}" alt="">
+        <img class="img-responsive" src="{{url('user/img/partner/codelover.png')}}" alt="">
       </div>
       <div>
-        <img class="img-responsive" src="{{url('frontend/img/partner/fsoft.jpg')}}" alt="">
+        <img class="img-responsive" src="{{url('user/img/partner/fsoft.jpg')}}" alt="">
       </div>
       <div>
-        <img class="img-responsive" src="{{url('frontend/img/partner/hackademic hanoi.png')}}" alt="">
+        <img class="img-responsive" src="{{url('user/img/partner/hackademic hanoi.png')}}" alt="">
       </div>
       <div>
-        <img class="img-responsive" src="{{url('frontend/img/partner/ibm-logo.jpg')}}" alt="">
+        <img class="img-responsive" src="{{url('user/img/partner/ibm-logo.jpg')}}" alt="">
       </div>
       <div>
-        <img class="img-responsive" src="{{url('frontend/img/partner/IFS.png')}}" alt="">
+        <img class="img-responsive" src="{{url('user/img/partner/IFS.png')}}" alt="">
       </div>
       <div>
-        <img class="img-responsive" src="{{url('frontend/img/partner/it japan.png')}}" alt="">
+        <img class="img-responsive" src="{{url('user/img/partner/it japan.png')}}" alt="">
       </div>
       <div>
-        <img class="img-responsive" src="{{url('frontend/img/partner/smartosc.png')}}" alt="">
+        <img class="img-responsive" src="{{url('user/img/partner/smartosc.png')}}" alt="">
       </div>
     </div>
   </div>
