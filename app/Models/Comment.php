@@ -10,7 +10,8 @@ class Comment extends Model
     protected $guarded = ['id'];
     public $timestamp = true;
 
-    public function post(){
-        return $this->belongsTo(Post::class);
+    public function commentable()
+    {
+        return $this->morphTo();
     }
 }
