@@ -20,6 +20,7 @@ class CreateCommentsTable extends Migration
             $table->text('body');
             $table->integer('parent_id')->unsigned()->nullable();
             $table->foreign('parent_id')->references('id')->on('comments')->onDelete('cascade');
+            $table->morphs('commentable');
             $table->timestamps();
         });
     }
