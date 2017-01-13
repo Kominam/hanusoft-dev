@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
-    @include('layouts.user.includes.head')
+    @include('layouts.guest.includes.head')
     <body>
         <div class="body">
             <noscript>
                 Your script is turn off.Turn it on browser setting
             </noscript>
             <div class="wrapper">
-                @include('layouts.user.includes.header')
+                @include('layouts.guest.includes.header')
       @yield('content')
-      @include('layouts.user.includes.footer')
-      @include('layouts.user.includes.scripts')
+      @include('layouts.guest.includes.footer')
+      @include('layouts.guest.includes.scripts')
             </div>
         </div>
     </body>
