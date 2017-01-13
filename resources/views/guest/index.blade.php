@@ -1,4 +1,4 @@
-@extends('layouts.user.desktop')
+@extends('layouts.guest.desktop')
 @section('content')
 <div role="main" class="main">
   <div class="slider-container">
