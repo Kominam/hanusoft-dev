@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-   return view('user.index');
+   return view('g.index');
 })->name('index');
 Route::group(['namespace' => 'Guest'] ,function () {
 	Route::resource('projects', 'ProjectController');
