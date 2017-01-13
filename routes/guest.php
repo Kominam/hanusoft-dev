@@ -12,5 +12,11 @@
 */
 
 Route::get('/', function () {
-   return view('user.index');
+   return view('guest.index');
 })->name('index');
+Route::group(['namespace' => 'Guest'] ,function () {
+	Route::resource('projects', 'ProjectController');
+	Route::resource('members', 'MemberController');
+	Route::resource('posts', 'PostController');
+	Route::resource('comments', 'CommentController');
+});
