@@ -28,6 +28,20 @@ class Project extends Model
         ];
     }
 
+    public function getTypeAttribute($value)
+    {
+        if ($value == 0)
+        {
+            return 'Web';
+        } else if ($value ==1){
+            return 'Application';
+        } else if ($value == 2) {
+            return 'Brand';
+        } else {
+            return 'Logo';
+        }
+    }
+
     public function resources()
     {
         return $this->hasMany(Resource::class);

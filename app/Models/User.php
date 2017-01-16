@@ -32,6 +32,11 @@ class User extends Authenticatable
     const DESIGNER_MAJOR  = 'Designer';
     const TESTER_MAJOR    = 'Tester';
 
+    public function projects()
+    {
+        return $this->belongsToMany(Project::class);
+    }
+
     public function posts()
     {
         return $this->hasMany(Post::class);
@@ -42,8 +47,8 @@ class User extends Authenticatable
         return $this->belongsToMany(Skill::class)->withPivot('value');
     }
 
-    public function getAvatarImage($value)
+    public function getAvatarImageAttribute($value)
     {
-        return config('hanusoft.paths.avatar_image') . '$value';
+        return config('hanusoft.paths.avatar_image') . $value;
     }
 }

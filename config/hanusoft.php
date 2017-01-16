@@ -8,6 +8,6 @@ return [
         	'vendor' => 'user/vendor/',
         	'img' => 'user/img/'
         ],
-        'avatar_image' => 'user/avatar/'
+        'avatar_image' => '/user/img/team/'
     ],
 ];

@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Repository\Eloquent\MemberRepository as Member;
 use Response;
+use App\Models\User;
+use DB;
 
 class MemberController extends Controller
 {
@@ -22,7 +24,7 @@ class MemberController extends Controller
      */
     public function index()
     {
-        return Response::json($this->member->all());
+        return Response::json(['members' => $this->member->all()]);
     }
 
     
@@ -34,7 +36,13 @@ class MemberController extends Controller
      */
     public function show($slug)
     {
-        return Response::json($this->member->findBySlug($slug));
+        return Response::json(['member' => $this->member->findBySlug($slug,null,['projects', 'skills'])]);
+    }
+
+    public function getAllGrade()
+    {
+        $grades = DB::table('users')->select('grade')->distinct()->get();
+        return Response::json(['grades' => $grades]);
     }
 
 }

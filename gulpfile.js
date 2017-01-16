@@ -40,4 +40,6 @@ elixir(mix => {
       sourceVendor + 'user',
       publicUser + 'vendor'
     );
+ 
+    mix.webpack(source + 'js/guest.js', 'public/js/guest/guest.js');
 });
