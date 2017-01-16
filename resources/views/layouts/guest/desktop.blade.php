@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     @include('layouts.guest.includes.head')
-    <body>
-        <div class="body">
+    <body >
+        <div class="body" id="app">
             <noscript>
                 Your script is turn off.Turn it on browser setting
             </noscript>
