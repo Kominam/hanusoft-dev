@@ -7,6 +7,12 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <link rel="shortcut icon" href="img/favicon.png">
   <title>HanuSoft</title>
+
+  <script>
+    window.Laravel = <?php echo json_encode([
+      'csrfToken' => csrf_token(),
+    ]); ?>
+  </script>
   <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 
   <!-- Vendor CSS -->
@@ -28,9 +34,7 @@
 
   <!-- Head Libs -->
   <script src="{{url(config('hanusoft.paths.public_user.vendor').'modernizr/modernizr.js')}}"></script>
-  <!--   Sweet Alert -->
-  {{-- <link rel="stylesheet" href="{{ elixir('css/sweetalert.css') }}">
-  <script src="{{ elixir('js/sweetalert.js') }}"></script> --}}
+  
   @stack('css')
   @stack('style')
   @stack('js-head')

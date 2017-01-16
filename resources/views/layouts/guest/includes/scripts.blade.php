@@ -1,3 +1,4 @@
+@stack('script')
 <script src="{{url(config('hanusoft.paths.public_user.vendor').'jquery/jquery.js')}}"></script>
 <script src="{{url(config('hanusoft.paths.public_user.vendor').'jquery.appear/jquery.appear.js')}}"></script>
 <script src="{{url(config('hanusoft.paths.public_user.vendor').'jquery.easing/jquery.easing.js')}}"></script>
@@ -27,4 +28,3 @@
 
 <!-- Theme Initialization Files -->
 <script src="{{url(config('hanusoft.paths.public_user.js').'theme.init.js')}}"></script>
-@stack('script')
