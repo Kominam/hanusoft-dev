@@ -32,6 +32,11 @@ class User extends Authenticatable
     const DESIGNER_MAJOR  = 'Designer';
     const TESTER_MAJOR    = 'Tester';
 
+    public function projects()
+    {
+        return $this->belongsToMany(Project::class);
+    }
+
     public function posts()
     {
         return $this->hasMany(Post::class);

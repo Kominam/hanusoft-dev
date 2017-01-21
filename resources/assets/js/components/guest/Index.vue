@@ -4,7 +4,7 @@
     <div class="slider" id="revolutionSlider" data-plugin-revolution-slider data-plugin-options='{"startheight": 677}'>
       <ul>
         <li data-transition="fade" data-slotamount="10" data-masterspeed="300">
-          <img src="/user/img/slides/hs-silder1.jpg" data-bgfit="cover" data-bgposition="center" data-bgrepeat="no-repeat">
+          <img v-bind:src="'/user/img/slides/hs-silder1.jpg'" data-bgfit="cover" data-bgposition="center" data-bgrepeat="no-repeat">
           <div class="tp-caption sft stb visible-lg"
             data-x="417"
             data-y="250"
@@ -47,7 +47,7 @@
           </a>
         </li>
         <li data-transition="fade" data-slotamount="10" data-masterspeed="300">
-          <img src="/user/img/slides/hs-silder1.jpg" data-bgfit="cover" data-bgposition="right center" data-bgrepeat="no-repeat">
+          <img v-bind:src="'/user/img/slides/hs-silder1.jpg'" data-bgfit="cover" data-bgposition="right center" data-bgrepeat="no-repeat">
           <div class="tp-caption featured-label sft stb"
             data-x="center"
             data-y="280"

@@ -23,16 +23,15 @@
 
 					<div class="row">
 						<div class="col-md-4">
-
 							<div class="owl-carousel" data-plugin-options='{"items": 1}'>
 								<div>
 									<div class="thumbnail">
-										<img alt="" height="300" class="img-responsive" :src="member.avatar_image">
+										<img :src="member.avatar_image" class="img-responsive" alt="" height="300">
 									</div>
 								</div>
 								<div>
 									<div class="thumbnail">
-										<img alt="" height="300" class="img-responsive" :src="member.avatar_image">
+										<img :src="member.avatar_image" class="img-responsive" alt="" height="300">
 									</div>
 								</div>
 							</div>
@@ -49,22 +48,11 @@
 								<a data-tooltip data-placement="bottom" href="../../../www.twitter.com/index.html" data-original-title="Twitter"><i class="fa fa-twitter"></i><span>Twitter</span></a>
 								<a data-tooltip data-placement="bottom" href="../../../www.linkedin.com/index.html" data-original-title="Linkedin"><i class="fa fa-linkedin"></i><span>Linkedin</span></a>
 							</span>
-
 							<p>{{ member.bio }}</p>
-
-							<ul class="list icons list-unstyled">
-								<li><i class="fa fa-check"></i> Fusce sit amet orci quis arcu vestibulum vestibulum sed ut felis.</li>
-								<li><i class="fa fa-check"></i> Phasellus in risus quis lectus iaculis vulputate id quis nisl.</li>
-								<li><i class="fa fa-check"></i> Iaculis vulputate id quis nisl.</li>
-							</ul>
-
 						</div>
 					</div>
-
 					<hr class="tall" />
-
 					<div class="row center">
-
 						<div class="col-md-3">
 							<div class="circular-bar">
 								<div class="circular-bar-chart" data-percent="75" data-plugin-options='{"barColor": "#E36159"}'>
@@ -102,7 +90,7 @@
 
 				</div>
 
-				<section class="parallax" data-stellar-background-ratio="0.5" style="background-image: '/user//user/img/parallax-transparent.jpg';">
+				<section class="parallax" data-stellar-background-ratio="0.5" style="background-image: '/user/img/parallax-transparent.jpg';">
 					<div class="container">
 						<div class="row center">
 							<div class="col-md-12">
@@ -138,55 +126,13 @@
 						</div>
 
 						<ul class="portfolio-list">
-							<li class="col-md-3">
+							<li class="col-md-3" v-for="project in member.projects">
 								<div class="portfolio-item thumbnail">
 									<a href="portfolio-single-project.html" class="thumb-info">
 										<img alt="" class="img-responsive" src="/user/img/projects/project.jpg">
 										<span class="thumb-info-title">
-											<span class="thumb-info-inner">SEO</span>
-											<span class="thumb-info-type">Website</span>
-										</span>
-										<span class="thumb-info-action">
-											<span title="Universal" class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
-										</span>
-									</a>
-								</div>
-							</li>
-							<li class="col-md-3">
-								<div class="portfolio-item thumbnail">
-									<a href="portfolio-single-project.html" class="thumb-info">
-										<img alt="" class="img-responsive" src="/user/img/projects/project-1.jpg">
-										<span class="thumb-info-title">
-											<span class="thumb-info-inner">Okler</span>
-											<span class="thumb-info-type">Brand</span>
-										</span>
-										<span class="thumb-info-action">
-											<span title="Universal" class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
-										</span>
-									</a>
-								</div>
-							</li>
-							<li class="col-md-3">
-								<div class="portfolio-item thumbnail">
-									<a href="portfolio-single-project.html" class="thumb-info">
-										<img alt="" class="img-responsive" src="/user/img/projects/project-2.jpg">
-										<span class="thumb-info-title">
-											<span class="thumb-info-inner">The Fly</span>
-											<span class="thumb-info-type">Logo</span>
-										</span>
-										<span class="thumb-info-action">
-											<span title="Universal" class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
-										</span>
-									</a>
-								</div>
-							</li>
-							<li class="col-md-3">
-								<div class="portfolio-item thumbnail">
-									<a href="portfolio-single-project.html" class="thumb-info">
-										<img alt="" class="img-responsive" src="/user/img/projects/project-3.jpg">
-										<span class="thumb-info-title">
-											<span class="thumb-info-inner">The Fly</span>
-											<span class="thumb-info-type">Website</span>
+											<span class="thumb-info-inner">{{ project.type }}</span>
+											<span class="thumb-info-type">{{ project.name }}</span>
 										</span>
 										<span class="thumb-info-action">
 											<span title="Universal" class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
@@ -216,7 +162,7 @@
         },
         methods:{
             fetchMember(){
-                this.$http.get('/api/members/' + this.$route.params.memberSlug).then(response => {
+                this.$http.get('/api/guest/members/' + this.$route.params.memberSlug).then(response => {
                     this.member = response.data.member;
                 });
             }

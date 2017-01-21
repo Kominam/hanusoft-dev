@@ -36,7 +36,7 @@ class MemberController extends Controller
      */
     public function show($slug)
     {
-        return Response::json(['member' => $this->member->findBySlug($slug)]);
+        return Response::json(['member' => $this->member->findBySlug($slug,null,['projects', 'skills'])]);
     }
 
     public function getAllGrade()

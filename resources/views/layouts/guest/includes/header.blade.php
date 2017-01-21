@@ -1,10 +1,10 @@
 <header id="header">
   <div class="container">
     <div class="logo">
-      <a >
+      <router-link to="/">
         <img alt="Hanusoft" width="111" height="54" data-sticky-width="82" data-sticky-height="40"
         src="/user/img/logo.png">
-      </a>
+      </router-link>
     </div>
     <div class="search">
       <form id="searchForm" action="#" method="get">
@@ -43,7 +43,12 @@
       <nav class="nav-main mega-menu">   
         <ul class="nav nav-pills nav-main" id="mainMenu">  
             <li><router-link to="/">Home</router-link></li>
+            <li><router-link to="/">About</router-link></li>
+            <li><router-link to="/">Service</router-link></li>
             <li><router-link to="/members">Members</router-link></li>
+            <li><router-link to="/">Projects</router-link></li>
+            <li><router-link to="/">Posts</router-link></li>
+            <li><router-link to="/">Contact</router-link></li>
         </ul>
       </nav>
     </div>
