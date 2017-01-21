@@ -50,12 +50,12 @@
         },
         methods:{
             fetchMembers(){
-                this.$http.get('/members').then(response => {
+                this.$http.get('/api/members').then(response => {
                     this.members = response.data.members;
                 });
             },
             fetchGrades(){
-                this.$http.get('/grades').then(response => {
+                this.$http.get('/api/grades').then(response => {
                     this.grades = response.data.grades;
                 });
             }

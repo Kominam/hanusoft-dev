@@ -1,9 +1,9 @@
 <header id="header">
   <div class="container">
     <div class="logo">
-      <a href="{{route('index')}}">
+      <a >
         <img alt="Hanusoft" width="111" height="54" data-sticky-width="82" data-sticky-height="40"
-        src="{{url('user/img/logo.png')}}">
+        src="/user/img/logo.png">
       </a>
     </div>
     <div class="search">
@@ -19,10 +19,10 @@
     <nav>
       <ul class="nav nav-pills nav-top">
         <li>
-          <a href="{{-- {{route('about')}} --}}"><i class="fa fa-angle-right"></i>About Us</a>
+          <a href="#"><i class="fa fa-angle-right"></i>About Us</a>
         </li>
         <li>
-          <a href="{{-- {{route('contact')}} --}}"><i class="fa fa-angle-right"></i>Contact Us</a>
+          <a href="#"><i class="fa fa-angle-right"></i>Contact Us</a>
         </li>
         <li class="phone">
           <span><i class="fa fa-phone"></i>(84 4)35 43 0267</span>
@@ -40,30 +40,12 @@
         <li class="googleplus"><a href="https://plus.google.com/u/3/108878251893660650893" target="_blank" title="Twitter">Gmail</a></li>
         <li class="github"><a href="https://github.com/Hanusoft" target="_blank" title="Github">Github</a></li>
       </ul>
-      <nav class="nav-main mega-menu">
-        <ul class="nav nav-pills nav-main" id="mainMenu">
-          <li class="{{ Route::currentRouteNamed('index') ? 'active' : '' }}">
-            <a href={{route('index')}}>Home</a>
-          </li>
-          <li class="{{-- {{ Route::currentRouteNamed('about') ? 'active' : '' }} --}}">
-            <a href="{{-- {{route('about')}} --}}">About</a></li>
-          <li class="{{-- {{ Route::currentRouteNamed('services') ? 'active' : '' }} --}}">
-            <a href="{{-- {{route('services')}} --}}">Service</a>
-          </li>
-          <li class="{{-- {{ Route::currentRouteNamed('members') ? 'active' : '' }} --}}">
-            <a href="{{-- {{route('members')}} --}}">Members </a>
-          </li>
-          <li class="{{-- {{ Route::currentRouteNamed('projects') ? 'active' : '' }} --}}">
-            <a href="{{-- {{route('projects')}} --}}">Project</a>
-          </li>
-          <li class="{{-- {{ Route::currentRouteNamed('posts') ? 'active' : '' }} --}}">
-            <a href="{{-- {{route('posts')}} --}}">Post</a>
-          </li>
-          <li class="{{-- {{ Route::currentRouteNamed('contact') ? 'active' : '' }} --}}">
-            <a href="{{-- {{route('contact')}} --}}">Contact</a>
-          </li>
+      <nav class="nav-main mega-menu">   
+        <ul class="nav nav-pills nav-main" id="mainMenu">  
+            <li><router-link to="/">Home</router-link></li>
+            <li><router-link to="/members">Members</router-link></li>
         </ul>
       </nav>
     </div>
   </div>
-</header>
+  </header>

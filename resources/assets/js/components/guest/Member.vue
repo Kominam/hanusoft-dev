@@ -1,13 +1,13 @@
 <template lang="html">
     <li class="col-md-3 col-sm-6 col-xs-12 isotope-item" v-bind:class="member.grade ">
                                 <div class="team-item thumbnail">
-                                    <a href="members_detail.html" class="thumb-info team">
+                                <router-link :to="{ name: 'member.show', params: { memberSlug: member.slug }}" class="thumb-info team">
                                         <img class="img-responsive" alt="" v-bind:src="member.avatar_image">
                                         <span class="thumb-info-title">
                                             <span class="thumb-info-inner">{{ member.name }}</span>
                                             <span class="thumb-info-type">{{member.major }}</span>
                                         </span>
-                                    </a>
+                                    </router-link>
                                     <span class="thumb-info-caption">
                                         <p>{{ member.bio | str_limit(50) }}</p>
                                         <span class="thumb-info-social-icons">
