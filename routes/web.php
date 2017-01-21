@@ -10,6 +10,9 @@
 | to using a Closure or controller method. Build something great!
 |
 */
+Route::get('/', function () {
+   return view('layouts.guest.desktop');
+})->name('index');
 
 Route::get('fire', function () {
     // this fires the event
