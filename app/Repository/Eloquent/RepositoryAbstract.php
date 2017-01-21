@@ -81,8 +81,8 @@ abstract class RepositoryAbstract implements RepositoryInterface {
      * @param array $columns
      * @return mixed
      */
-    public function find($id, $columns = array('*')) {
-        return $this->model->find($id, $columns);
+    public function find($id, $columns = array('*'), $relation = []) {
+        return $this->model->with($relation)->find($id, $columns);
     }
  
     /**
@@ -91,12 +91,12 @@ abstract class RepositoryAbstract implements RepositoryInterface {
      * @param array $columns
      * @return mixed
      */
-    public function findBy($attribute, $value, $columns = array('*')) {
-        return $this->model->where($attribute, '=', $value)->first($columns);
+    public function findBy($attribute, $value, $columns = array('*'), $relation = []) {
+        return $this->model->with($relation)->where($attribute, '=', $value)->first($columns);
     }
 
-    public function findBySlug($value, $columns = array('*')) {
-        return $this->model->where('slug', '=', $value)->first($columns);
+    public function findBySlug($value, $columns = array('*'), $relation = []) {
+        return $this->model->with($relation)->where('slug', '=', $value)->first($columns);
     }
  
     /**
