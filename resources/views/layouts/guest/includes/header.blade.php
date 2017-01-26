@@ -40,17 +40,17 @@
         <li class="googleplus"><a href="https://plus.google.com/u/3/108878251893660650893" target="_blank" title="Twitter">Gmail</a></li>
         <li class="github"><a href="https://github.com/Hanusoft" target="_blank" title="Github">Github</a></li>
       </ul>
-      <nav class="nav-main mega-menu">   
-        <ul class="nav nav-pills nav-main" id="mainMenu">  
+      <nav class="nav-main mega-menu">
+        <ul class="nav nav-pills nav-main" id="mainMenu">
             <li><router-link to="/">Home</router-link></li>
             <li><router-link to="/">About</router-link></li>
             <li><router-link to="/">Service</router-link></li>
             <li><router-link to="/members">Members</router-link></li>
-            <li><router-link to="/">Projects</router-link></li>
+            <li><router-link to="/projects">Projects</router-link></li>
             <li><router-link to="/">Posts</router-link></li>
             <li><router-link to="/">Contact</router-link></li>
         </ul>
       </nav>
     </div>
   </div>
-  </header>
+</header>

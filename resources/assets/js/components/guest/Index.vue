@@ -356,7 +356,7 @@
   <li class="isotope-item">
     <div class="portfolio-item img-thumbnail">
       <a href="portfolio-single-project.html" class="thumb-info secundary">
-      <img alt="" class="img-responsive" src="/user/img/projects/project.jpg">
+      <img alt="" class="img-responsive" src="/user/img/projects/book-1.jpg">
       <span class="thumb-info-title">
       <span class="thumb-info-inner">SEO</span>
       <span class="thumb-info-type">Website</span>
@@ -370,7 +370,7 @@
   <li class="isotope-item">
     <div class="portfolio-item img-thumbnail">
       <a href="portfolio-single-project.html" class="thumb-info secundary">
-      <img alt="" class="img-responsive" src="/user/img/projects/project-1.jpg">
+      <img alt="" class="img-responsive" src="/user/img/projects/cms-1.png">
       <span class="thumb-info-title">
       <span class="thumb-info-inner">Okler</span>
       <span class="thumb-info-type">Brand</span>
@@ -384,7 +384,7 @@
   <li class="isotope-item">
     <div class="portfolio-item img-thumbnail">
       <a href="portfolio-single-project.html" class="thumb-info secundary">
-      <img alt="" class="img-responsive" src="/user/img/projects/project-7.jpg">
+      <img alt="" class="img-responsive" src="/user/img/projects/events-1.png">
       <span class="thumb-info-title">
       <span class="thumb-info-inner">The Code</span>
       <span class="thumb-info-type">Website</span>
@@ -398,7 +398,7 @@
   <li class="isotope-item">
     <div class="portfolio-item img-thumbnail">
       <a href="portfolio-single-project.html" class="thumb-info secundary">
-      <img alt="" class="img-responsive" src="/user/img/projects/project-4.jpg">
+      <img alt="" class="img-responsive" src="/user/img/projects/fit-portal-1.jpg">
       <span class="thumb-info-title">
       <span class="thumb-info-inner">The Code</span>
       <span class="thumb-info-type">Website</span>
@@ -412,7 +412,7 @@
   <li class="isotope-item">
     <div class="portfolio-item img-thumbnail">
       <a href="portfolio-single-project.html" class="thumb-info secundary">
-      <img alt="" class="img-responsive" src="/user/img/projects/project-5.jpg">
+      <img alt="" class="img-responsive" src="/user/img/projects/online-dating-1.png">
       <span class="thumb-info-title">
       <span class="thumb-info-inner">SEO</span>
       <span class="thumb-info-type">Website</span>

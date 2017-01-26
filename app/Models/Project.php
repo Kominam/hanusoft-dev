@@ -13,6 +13,9 @@ class Project extends Model
 
     protected $table   = 'projects';
     protected $guarded = ['id'];
+    protected $casts = [
+        'image' => 'array'
+    ];
     public $timestamp  = true;
     const WEB_TYPE = 0;
     const APLLICATION_TPYE =1;
@@ -40,6 +43,11 @@ class Project extends Model
         } else {
             return 'Logo';
         }
+    }
+
+    public function getImageAttribute($value)
+    {
+        return config('hanusoft.paths.project_image').$value;
     }
 
     public function resources()
