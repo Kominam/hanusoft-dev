@@ -15,7 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
     <script>
-        var socket = io('http://localhost:3000');
+        var socket = io.connect('http://hanusoft.com:3000');
         socket.on('test-channel:App\\Events\\TestEvent', function(message){
             $('#power').text(parseInt($('#power').text()) + parseInt(message.data.power));
         });
