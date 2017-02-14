@@ -22,7 +22,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-    	return Response::json($this->project->all());
+    	return Response::json(['projects' => $this->project->all()]);
     }
 
     /**
@@ -33,7 +33,7 @@ class ProjectController extends Controller
      */
     public function show($slug)
     {
-        return Response::json($this->project->findBySlug($slug));
+        return Response::json(['projects' => $this->project->findBySlug($slug)]);
     }
 
 }
