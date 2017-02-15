@@ -34,3 +34,9 @@ Route::get('redis', function () {
     return view('redis');
 });
 
+Route::get('test', function () {
+    // Route logic...
+    event(new App\Events\TestEvent());
+    return "event fired";
+});
+
