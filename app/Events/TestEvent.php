@@ -11,18 +11,18 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
 class TestEvent implements ShouldBroadcast
 {
-    use InteractsWithSockets, SerializesModels;
     public $data;
+    use InteractsWithSockets, SerializesModels;
 
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct($value)
+   public function __construct()
     {
-         $this->data = array(
-            'power'=> $value
+        $this->data = array(
+            'power'=> '10'
         );
     }
 
@@ -33,6 +33,6 @@ class TestEvent implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('test-channel');
+        return ['test-channel'];
     }
 }

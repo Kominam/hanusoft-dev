@@ -2,7 +2,7 @@
   <li class="isotope-item websites">
     <div class="portfolio-item img-thumbnail">
       <a href="single-project.html" class="thumb-info secundary">
-        <img alt="" class="img-responsive" v-bind:src="project.image">
+        <img alt="" class="img-responsive" v-bind:src="'/user/img/projects/' + project.image.main">
         <span class="thumb-info-title">
           <span class="thumb-info-inner">{{ project.name }}</span>
           <span class="thumb-info-type">{{ project.type }}</span>
