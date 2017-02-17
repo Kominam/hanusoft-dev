@@ -33,7 +33,37 @@ class ProjectController extends Controller
      */
     public function show($slug)
     {
-        return Response::json(['projects' => $this->project->findBySlug($slug)]);
-    }
+        //find id of current project 
+        $project = $this->project->findBySlug($slug);
+        //find prev, next
+        $count = $this->project->count();
+        $prev = null;
+        $next = null;
+        $nextProjectSlug = '#';
+        $prevProjectSlug = '#';
+        if ($project->id ===1)
+        {
+            $next = ++$project->id;
+        } else if($project->id == $count) {
+            $prev = --$project->id; 
+        } else {
+            $prev = --$project->id;
+            $next = ++$project->id;
+        }
+        
+        if ($next !== null)
+        $nextProjectSlug = \App\Models\Project::find($next)->slug;
+        if ($prev !== null)
+        $prevProjectSlug = \App\Models\Project::find($prev)->slug;
 
+        //find related project
+        $relatedProjects = $this->project->findRelated($project->id,$project->type);
+        return Response::json([
+            'project' => $project,
+            'prev' =>$prevProjectSlug,
+            'next' => $nextProjectSlug,
+            'relatedProjects' => $relatedProjects
+            ]);
+    }
 }
+

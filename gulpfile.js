@@ -42,4 +42,5 @@ elixir(mix => {
     );
  
     mix.webpack(source + 'js/guest.js', 'public/js/guest/guest.js');
+    mix.webpack(source + 'js/redis.js', 'public/js/redis.js');
 });
