@@ -5,6 +5,7 @@ namespace App\Models;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 use Illuminate\Database\Eloquent\Model;
+use \Carbon\Carbon;
 
 class Project extends Model
 {
@@ -45,9 +46,9 @@ class Project extends Model
         }
     }
 
-    public function getImageAttribute($value)
+    public function getPlanStartDateAttribute($value)
     {
-        return config('hanusoft.paths.project_image').$value;
+        return Carbon::parse($value)->format('jS F Y');
     }
 
     public function resources()

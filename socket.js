@@ -1,25 +1,15 @@
-//require modules
-var express = require('express');
-var app     = express();
-var http    = require('http').Server(app);
-var socket  = require('socket.io')(http);
-var Redis   = require('ioredis');
-var redis   = new Redis();
-
-//configuration
-var port = process.env.PORT || 3000;
-
-//subscribe to test-channel on redis
-redis.subscribe('test-channel', function(error, count){});
-
-//message event listener
-redis.on('message', function(channel, message){
-	console.log('Message received: ' + message);
-	message = JSON.parse(message);
-	socket.emit(channel + ':' + message.event, message.data);
+var app = require('express')();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+var Redis = require('ioredis');
+var redis = new Redis();
+redis.subscribe('test-channel', function(err, count) {
 });
-
-//server listener
-http.listen(port, function(){
-	console.log('Server running on port: ' + port);
+redis.on('message', function(channel, message) {
+	console.log('Message Recieved: ' + message);
+    message = JSON.parse(message);
+    io.emit(channel + ':' + message.event, message.data);
+});
+http.listen(3000, function(){
+    console.log('Listening on Port 3000');
 });
