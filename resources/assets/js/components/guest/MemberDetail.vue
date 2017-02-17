@@ -129,7 +129,7 @@
 							<li class="col-md-3" v-for="project in member.projects">
 								<div class="portfolio-item thumbnail">
 									<a href="portfolio-single-project.html" class="thumb-info">
-										<img alt="" class="img-responsive" src="/user/img/projects/project.jpg">
+										<img alt="" class="img-responsive" v-bind:src="'/user/img/projects/' + project.image.main">
 										<span class="thumb-info-title">
 											<span class="thumb-info-inner">{{ project.type }}</span>
 											<span class="thumb-info-type">{{ project.name }}</span>
