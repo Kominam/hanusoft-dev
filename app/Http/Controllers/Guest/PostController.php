@@ -22,7 +22,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        return Response::json($this->post->all());
+        return Response::json(['posts' => $this->post->all()]);
     }
 
 
@@ -35,5 +35,10 @@ class PostController extends Controller
     public function show($slug)
     {
         return Response::json($this->post->findBySlug($slug));
+    }
+    //show recent posts 
+    public function recents(){
+        dd($this->post->recents());
+        return Response::json(['recents' =>$this->post->recents()]);
     }
 }

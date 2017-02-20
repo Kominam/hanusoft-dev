@@ -14,4 +14,12 @@ class PostRepository extends RepositoryAbstract{
     {
         return 'App\Models\Post';
     }
+
+    public function all($columns = array('*')){
+    	return $this->model->with(['user','comments','category'])->get($columns);
+    }
+
+    public function recents(){
+        return $this->model->recent()->get();
+    }
 }

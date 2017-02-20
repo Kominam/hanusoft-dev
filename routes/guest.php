@@ -22,5 +22,7 @@ Route::group(['namespace' => 'Guest'] ,function () {
 	Route::resource('members', 'MemberController');
 	Route::resource('posts', 'PostController');
 	Route::resource('comments', 'CommentController');
+	Route::resource('categories', 'CategoryController');
 	Route::get('grades', 'MemberController@getAllGrade');
+	Route::get('posts/recents', 'PostController@recents');
 });
