@@ -47,7 +47,7 @@
             <li><router-link to="/">Service</router-link></li>
             <li><router-link to="/members">Members</router-link></li>
             <li><router-link to="/projects">Projects</router-link></li>
-            <li><router-link to="/">Posts</router-link></li>
+            <li><router-link to="/posts">Posts</router-link></li>
             <li><router-link to="/">Contact</router-link></li>
         </ul>
       </nav>

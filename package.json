@@ -23,6 +23,7 @@
     "pusher-js": "^4.0.0",
     "socket.io": "^1.7.2",
     "vue": "^2.1.10",
+    "vue-paginate": "^3.4.0",
     "vue-router": "^2.1.2",
     "vue-template-compiler": "^2.1.10"
   }
