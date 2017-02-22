@@ -12,7 +12,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <h1>Large Image</h1>
+                    <h1>Posts</h1>
                 </div>
             </div>
         </div>
@@ -25,9 +25,9 @@
                     <li v-for="post in paginated('posts')">
                       <article class="post post-large" style="padding: 50px 0px 50px 0px">
                         <div class="post-date">
-                            <span class="day">{{ post.created_at}}</span>
+                            <span class="day">{{ post.created_day}}</span>
                             <span class="month">
-                            {{post.created_at}}</span>
+                            {{post.created_month}}</span>
                         </div>
                         <div class="post-content">
                             <h2><a href='#'>{{post.title}}</a></h2>
@@ -36,7 +36,7 @@
                                 <span><i class="fa fa-user"></i> By <a href="#">{{post.user.name}}</a> </span>
                                 <span><i class="fa fa-tag"></i> <a href='#'>{{post.category.name}}</a></span>
                                 <span><i class="fa fa-comments"></i> <a href="#">{{post.comment_count}} Comments</a></span>
-                                <a href="#" class="btn btn-xs btn-primary pull-right">Read more...</a>
+                               <router-link :to="{ name: 'post.show', params: { postSlug: post.slug }}" class="btn btn-xs btn-primary pull-right">Read more...</a>
                             </div>
                         </div>
                     </article>

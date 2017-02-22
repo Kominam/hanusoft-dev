@@ -34,7 +34,7 @@ class PostController extends Controller
      */
     public function show($slug)
     {
-        return Response::json($this->post->findBySlug($slug));
+        return Response::json(['post' => $this->post->findBySlug($slug, null, ['user','comments','category'])]);
     }
     //show recent posts 
     public function recents(){

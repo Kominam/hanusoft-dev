@@ -3,10 +3,9 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-
 use Cviebrock\EloquentSluggable\Sluggable;
-
 use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
+use \Carbon\Carbon;
 
 class Post extends Model
 {
@@ -16,8 +15,8 @@ class Post extends Model
     protected $table="posts";
     protected $guarded =['id'];
     public $timestamp =true;
-    protected $attributes = ['comment_count'];
-    protected $appends = ['comment_count'];
+    protected $attributes = ['comment_count','created_day','created_month'];
+    protected $appends = ['comment_count', 'created_day','created_month'];
 
     public function sluggable()
     {
@@ -46,6 +45,15 @@ class Post extends Model
         return $this->attributes['comment_count'] = $this->comments->count();
     }
 
+    public function getCreatedDayAttribute()
+    {
+        return $this->attributes['created_day'] = Carbon::parse($this->created_at)->format('d');
+    }
+
+    public function getCreatedMonthAttribute()
+    {
+        return $this->attributes['created_month'] = substr(Carbon::parse($this->created_at)->format('F'),0,3);
+    }
 
     public function category() {
         return $this->belongsTo(Category::class);

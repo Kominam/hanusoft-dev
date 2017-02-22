@@ -25,4 +25,5 @@ Route::group(['namespace' => 'Guest'] ,function () {
 	Route::resource('categories', 'CategoryController');
 	Route::get('grades', 'MemberController@getAllGrade');
 	Route::get('posts/recents', 'PostController@recents');
+	Route::post('contact/send','ContactController@sendContact');
 });
