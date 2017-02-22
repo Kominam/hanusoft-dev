@@ -22,6 +22,7 @@
     "laravel-echo": "^1.2.4",
     "pusher-js": "^4.0.0",
     "socket.io": "^1.7.2",
+    "vee-validate": "^2.0.0-beta.17",
     "vue": "^2.1.10",
     "vue-paginate": "^3.4.0",
     "vue-router": "^2.1.2",

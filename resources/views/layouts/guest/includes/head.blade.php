@@ -5,7 +5,7 @@
   <meta name="author" content="HanuSoft">
   <meta name="keyword" content="HanuSoft, Websites, Coder">
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
   <title>HanuSoft</title>
 
   <script>
@@ -34,7 +34,6 @@
 
   <!-- Head Libs -->
   <script src="{{url(config('hanusoft.paths.public_user.vendor').'modernizr/modernizr.js')}}"></script>
-  
   @stack('css')
   @stack('style')
   @stack('js-head')

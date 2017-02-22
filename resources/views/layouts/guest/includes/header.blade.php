@@ -43,12 +43,12 @@
       <nav class="nav-main mega-menu">
         <ul class="nav nav-pills nav-main" id="mainMenu">
             <li><router-link to="/">Home</router-link></li>
-            <li><router-link to="/">About</router-link></li>
-            <li><router-link to="/">Service</router-link></li>
+            <li><router-link to="/about">About</router-link></li>
+            <li><router-link to="/service">Service</router-link></li>
             <li><router-link to="/members">Members</router-link></li>
             <li><router-link to="/projects">Projects</router-link></li>
             <li><router-link to="/posts">Posts</router-link></li>
-            <li><router-link to="/">Contact</router-link></li>
+            <li><router-link to="/contact">Contact</router-link></li>
         </ul>
       </nav>
     </div>
