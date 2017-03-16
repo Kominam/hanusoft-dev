@@ -5,14 +5,23 @@ namespace App\Models;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 use Illuminate\Database\Eloquent\Model;
+use Prettus\Repository\Contracts\Transformable;
+use Prettus\Repository\Traits\TransformableTrait;
 use \Carbon\Carbon;
 
-class Post extends Model
+class Post extends Model implements Transformable
 {
     use Sluggable;
     use SluggableScopeHelpers;
+    use TransformableTrait;
 
-    protected $table      = "posts";
+    protected $table    = 'posts';
+    protected $fillable = [
+        'title',
+        'content',
+        'user_id',
+        'category_id',
+    ];
     protected $guarded    = ['id'];
     public $timestamp     = true;
     protected $attributes = ['comment_count', 'created_day', 'created_month'];

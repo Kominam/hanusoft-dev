@@ -5,23 +5,39 @@ namespace App\Models;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 use Illuminate\Database\Eloquent\Model;
+use Prettus\Repository\Contracts\Transformable;
+use Prettus\Repository\Traits\TransformableTrait;
 use \Carbon\Carbon;
 
-class Project extends Model
+class Project extends Model implements Transformable
 {
     use Sluggable;
     use SluggableScopeHelpers;
+    use TransformableTrait;
 
-    protected $table   = 'projects';
-    protected $guarded = ['id'];
-    protected $casts = [
-        'image' => 'array'
+    protected $table = 'projects';
+
+    protected $fillable = [
+        'name',
+        'description',
+        'image',
+        'type',
+        'date',
+        'plan_start_date',
+        'actual_start_date',
+        'plan_end_date',
+        'actual_end_date',
+        'source_url',
     ];
-    public $timestamp  = true;
-    const WEB_TYPE = 0;
-    const APLLICATION_TPYE =1;
-    const BRAND_TYPE =2;
-    const LOGO_TYPE =3;
+    protected $guarded = ['id'];
+    protected $casts   = [
+        'image' => 'array',
+    ];
+    public $timestamp      = true;
+    const WEB_TYPE         = 0;
+    const APLLICATION_TPYE = 1;
+    const BRAND_TYPE       = 2;
+    const LOGO_TYPE        = 3;
 
     public function sluggable()
     {
@@ -34,10 +50,9 @@ class Project extends Model
 
     public function getTypeAttribute($value)
     {
-        if ($value == 0)
-        {
+        if ($value == 0) {
             return 'Web';
-        } else if ($value ==1){
+        } else if ($value == 1) {
             return 'Application';
         } else if ($value == 2) {
             return 'Brand';
@@ -70,4 +85,5 @@ class Project extends Model
     {
         return $this->hasManyThrough(Phase::class, Task::class);
     }
+
 }
