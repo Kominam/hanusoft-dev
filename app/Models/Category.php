@@ -3,14 +3,23 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Prettus\Repository\Contracts\Transformable;
+use Prettus\Repository\Traits\TransformableTrait;
 
-class Category extends Model
+class Category extends Model implements Transformable
 {
-    protected $table = 'categories';
-    protected $guarded = ['id'];
+    use TransformableTrait;
+
+    protected $table    = 'categories';
+    protected $guarded  = ['id'];
+    protected $fillable = [
+        'name',
+    ];
     public $timestamp = true;
 
-    public function posts(){
+    public function posts()
+    {
         return $this->hasMany(Post::class);
     }
+
 }

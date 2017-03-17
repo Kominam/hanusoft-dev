@@ -3,14 +3,23 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Prettus\Repository\Contracts\Transformable;
+use Prettus\Repository\Traits\TransformableTrait;
 
-class Skill extends Model
+class Skill extends Model implements Transformable
 {
-    protected $table="skills";
-    protected $guarded =['id'];
-    public $timestamp =true;
+    use TransformableTrait;
 
-    public function users() {
-      return $this->belongsToMany(User::class)->withPivot('value');
+    protected $table    = 'skills';
+    protected $fillable = [
+        'name',
+    ];
+    protected $guarded = ['id'];
+    public $timestamp  = true;
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class)->withPivot('value');
     }
+
 }
