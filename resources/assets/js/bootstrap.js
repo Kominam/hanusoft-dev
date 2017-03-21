@@ -29,7 +29,8 @@ window.axios = require('axios');
 
 window.axios.defaults.headers.common = {
     'X-CSRF-TOKEN': window.Laravel.csrfToken,
-    'X-Requested-With': 'XMLHttpRequest'
+    'X-Requested-With': 'XMLHttpRequest',
+    'Accept': 'application/json'
 };
 
 /**
@@ -42,7 +43,7 @@ import Echo from "laravel-echo"
 
 window.Echo = new Echo({
     broadcaster: 'socket.io',
-    host: 'http://samplelaravel.dev:6001'
+    host: 'http://hanusoft.com:6001'
 });
 
 window.Echo.channel('test-channel')

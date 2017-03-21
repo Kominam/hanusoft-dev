@@ -3,8 +3,8 @@
 	"authEndpoint": "/broadcasting/auth",
 	"clients": [
 		{
-			"appId": "36763cfdbc9c0fce",
-			"key": "6855541eddcc1ab87a8e7bc2c63c29cc"
+			"appId": "079c44b24cbfedf0",
+			"key": "f8395c6735f880cd993c47b92c08380c"
 		}
 	],
 	"database": "redis",
