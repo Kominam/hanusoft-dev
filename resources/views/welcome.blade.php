@@ -97,9 +97,11 @@
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div>
+            <myfooter></myfooter>
         </div>
+       
     </body>
       <!-- Scripts -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ mix('js/guest.js') }}"></script>
 </html>

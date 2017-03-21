@@ -8,3 +8,8 @@ Homestead.json
 Homestead.yaml
 .env
 /composer.lock
+public/css/*
+public/js/*
+public/vendor/*
+public/mix-manifest.json
+/laravel-echo-server.json
