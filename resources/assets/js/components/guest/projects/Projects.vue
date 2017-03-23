@@ -1,6 +1,6 @@
 <template lang="html">
  	<ul class="portfolio-list sort-destination full-width" data-sort-id="portfolio">
-      <Project v-for="project in projects" v-bind:project="project"></Project>
+        <Project v-for="project in projects" :project="project"></Project>
     </ul>
 </template>
 <script>
@@ -17,9 +17,7 @@
     },
     methods: {
       fetchProjects() {
-        axios.get('/api/guest/projects').then(response => {
-          this.projects = response.data;
-        });
+     	axios.get('/api/guest/projects').then(response => this.projects = response.data.data.data);
       }
     }
   }

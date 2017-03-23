@@ -47,4 +47,8 @@ class PostRepositoryEloquent extends BaseRepository implements PostRepository
     {
         return "App\\Presenters\\PostPresenter";
     }
+
+    public function recent(){
+        return $this->model->recent()->get();
+    }
 }
