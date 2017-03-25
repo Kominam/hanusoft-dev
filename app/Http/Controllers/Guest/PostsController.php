@@ -2,17 +2,14 @@
 
 namespace App\Http\Controllers\Guest;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
-use Prettus\Validator\Contracts\ValidatorInterface;
-use Prettus\Validator\Exceptions\ValidatorException;
+use App\Contracts\Repositories\PostRepository;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\PostCreateRequest;
 use App\Http\Requests\PostUpdateRequest;
-use App\Contracts\Repositories\PostRepository;
 use App\Validators\PostValidator;
-use App\Http\Controllers\Controller;
-
+use Illuminate\Http\Request;
+use Prettus\Validator\Contracts\ValidatorInterface;
+use Prettus\Validator\Exceptions\ValidatorException;
 
 class PostsController extends Controller
 {
@@ -32,7 +29,6 @@ class PostsController extends Controller
         $this->repository = $repository;
         $this->validator  = $validator;
     }
-
 
     /**
      * Display a listing of the resource.
@@ -85,14 +81,13 @@ class PostsController extends Controller
             if ($request->wantsJson()) {
                 return response()->json([
                     'error'   => true,
-                    'message' => $e->getMessageBag()
+                    'message' => $e->getMessageBag(),
                 ]);
             }
 
             return redirect()->back()->withErrors($e->getMessageBag())->withInput();
         }
     }
-
 
     /**
      * Display the specified resource.
@@ -103,7 +98,7 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        $post = $this->repository->findByField('slug',$id);
+        $post = $this->repository->findByField('slug', $id);
 
         if (request()->wantsJson()) {
 
@@ -114,7 +109,6 @@ class PostsController extends Controller
 
         return view('posts.show', compact('post'));
     }
-
 
     /**
      * Show the form for editing the specified resource.
@@ -130,7 +124,6 @@ class PostsController extends Controller
 
         return view('posts.edit', compact('post'));
     }
-
 
     /**
      * Update the specified resource in storage.
@@ -166,14 +159,13 @@ class PostsController extends Controller
 
                 return response()->json([
                     'error'   => true,
-                    'message' => $e->getMessageBag()
+                    'message' => $e->getMessageBag(),
                 ]);
             }
 
             return redirect()->back()->withErrors($e->getMessageBag())->withInput();
         }
     }
-
 
     /**
      * Remove the specified resource from storage.
@@ -195,5 +187,19 @@ class PostsController extends Controller
         }
 
         return redirect()->back()->with('message', 'Post deleted.');
+    }
+
+    public function recent()
+    {
+        $posts = $this->repository->recent();
+
+        if (request()->wantsJson()) {
+
+            return response()->json([
+                'data' => $posts,
+            ]);
+        }
+
+        return view('posts.show', compact('posts'));
     }
 }

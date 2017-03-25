@@ -27,6 +27,15 @@
         <li class="phone">
           <span><i class="fa fa-phone"></i>(84 4)35 43 0267</span>
         </li>
+        <li>
+          <form action="{{ route('changeLang') }}" class="form-lang" method="post">
+                      <select name="locale" onchange='this.form.submit();'>
+                          <option value="en">English</option>
+                          <option value="vn"{{ Lang::locale() === 'vn' ? 'selected' : '' }}>Vietnam</option>
+                      </select>
+                      {{ csrf_field() }}
+          </form>
+        </li>
       </ul>
     </nav>
     <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
@@ -43,24 +52,24 @@
       <nav class="nav-main mega-menu">
         <ul class="nav nav-pills nav-main" id="mainMenu">
           <li class="{{ Route::currentRouteNamed('index') ? 'active' : '' }}">
-            <a href='#'>Home</a>
+            <a href='#'>{{ trans('menu.home') }}</a>
           </li>
           <li class="{{-- {{ Route::currentRouteNamed('about') ? 'active' : '' }} --}}">
-            <a href="{{-- {{route('about')}} --}}">About</a></li>
+            <a href="{{-- {{route('about')}} --}}">{{ trans('menu.about') }}</a></li>
           <li class="{{-- {{ Route::currentRouteNamed('services') ? 'active' : '' }} --}}">
-            <a href="{{-- {{route('services')}} --}}">Service</a>
+            <a href="{{-- {{route('services')}} --}}">{{ trans('menu.service') }}</a>
           </li>
           <li class="{{-- {{ Route::currentRouteNamed('members') ? 'active' : '' }} --}}">
-            <a href="{{-- {{route('members')}} --}}">Members </a>
+            <a href="{{-- {{route('members')}} --}}">{{ trans('menu.members') }} </a>
           </li>
           <li class="{{-- {{ Route::currentRouteNamed('projects') ? 'active' : '' }} --}}">
-            <a href="{{-- {{route('projects')}} --}}">Project</a>
+            <a href="{{-- {{route('projects')}} --}}">{{ trans('menu.projects') }}</a>
           </li>
           <li class="{{-- {{ Route::currentRouteNamed('posts') ? 'active' : '' }} --}}">
-            <a href="{{-- {{route('posts')}} --}}">Post</a>
+            <a href="{{-- {{route('posts')}} --}}">{{ trans('menu.posts') }}</a>
           </li>
           <li class="{{-- {{ Route::currentRouteNamed('contact') ? 'active' : '' }} --}}">
-            <a href="{{-- {{route('contact')}} --}}">Contact</a>
+            <a href="{{-- {{route('contact')}} --}}">{{ trans('menu.contact') }}</a>
           </li>
         </ul>
       </nav>

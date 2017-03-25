@@ -24,6 +24,11 @@ class ProjectRepositoryEloquent extends BaseRepository implements ProjectReposit
         return Project::class;
     }
 
+    public function presenter()
+    {
+        return "App\\Presenters\\ProjectPresenter";
+    }
+
     /**
     * Specify Validator class name
     *

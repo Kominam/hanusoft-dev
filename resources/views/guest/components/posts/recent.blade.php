@@ -1,0 +1,1 @@
+<recent-posts></recent-posts>
