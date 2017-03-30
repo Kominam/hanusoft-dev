@@ -16,6 +16,7 @@ Vue.filter('substring',(string,value) => {
 Vue.component('myfooter', require('./components/guest/GuestFooter.vue'));
 Vue.component('Projects', require('./components/guest/projects/Projects.vue'));
 Vue.component('recent-posts', require('./components/guest/posts/Recent.vue'));
+Vue.component('Members', require('./components/guest/members/Members.vue'));
 
 const app = new Vue({
     el: '#app',

@@ -1,7 +1,7 @@
 <header id="header">
   <div class="container">
     <div class="logo">
-      <a href="#">
+      <a href="{{ route('index') }}">
         <img alt="Hanusoft" width="111" height="54" data-sticky-width="82" data-sticky-height="40"
         src="{{url('user/img/logo.png')}}">
       </a>
@@ -19,7 +19,7 @@
     <nav>
       <ul class="nav nav-pills nav-top">
         <li>
-          <a href="{{-- {{route('about')}} --}}"><i class="fa fa-angle-right"></i>About Us</a>
+          <a href="{{route('about')}}"><i class="fa fa-angle-right"></i>About Us</a>
         </li>
         <li>
           <a href="{{-- {{route('contact')}} --}}"><i class="fa fa-angle-right"></i>Contact Us</a>
@@ -52,15 +52,15 @@
       <nav class="nav-main mega-menu">
         <ul class="nav nav-pills nav-main" id="mainMenu">
           <li class="{{ Route::currentRouteNamed('index') ? 'active' : '' }}">
-            <a href='#'>{{ trans('menu.home') }}</a>
+            <a href='{{ route('index') }}'>{{ trans('menu.home') }}</a>
           </li>
-          <li class="{{-- {{ Route::currentRouteNamed('about') ? 'active' : '' }} --}}">
-            <a href="{{-- {{route('about')}} --}}">{{ trans('menu.about') }}</a></li>
-          <li class="{{-- {{ Route::currentRouteNamed('services') ? 'active' : '' }} --}}">
-            <a href="{{-- {{route('services')}} --}}">{{ trans('menu.service') }}</a>
+          <li class="{{ Route::currentRouteNamed('about') ? 'active' : '' }}">
+            <a href="{{route('about')}}">{{ trans('menu.about') }}</a></li>
+          <li class="{{ Route::currentRouteNamed('services') ? 'active' : '' }}">
+            <a href="{{route('services')}}">{{ trans('menu.service') }}</a>
           </li>
-          <li class="{{-- {{ Route::currentRouteNamed('members') ? 'active' : '' }} --}}">
-            <a href="{{-- {{route('members')}} --}}">{{ trans('menu.members') }} </a>
+          <li class="{{ Route::currentRouteNamed('members') ? 'active' : '' }}">
+            <a href="{{route('members')}}">{{ trans('menu.members') }} </a>
           </li>
           <li class="{{-- {{ Route::currentRouteNamed('projects') ? 'active' : '' }} --}}">
             <a href="{{-- {{route('projects')}} --}}">{{ trans('menu.projects') }}</a>
