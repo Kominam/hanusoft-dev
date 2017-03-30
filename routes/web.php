@@ -9,17 +9,23 @@
 | contains the "web" middleware group. Now create something great!
 |
  */
-Route::group(['middleware' => 'localization'], function () {
-    Route::get('/test', function () {
+Route::group(['middleware' => 'localization', 'namespace' => 'Guest'], function () {
+    Route::name('index')->get('/', function () {
         return view('guest.index');
     });
-    Route::post('/lang','LanguageController@handle')->name('changeLang');
+    Route::name('about')->get('about', function () {
+        return view('guest.about');
+    });
+    Route::name('services')->get('services', function () {
+        return view('guest.services');
+    });
+    Route::name('members')->get('members', function(){
+    	return view('guest.members.index');
+    });
+    Route::name('members.show')->get('/members/{slug}', 'UsersController@show');
+    Route::post('/lang', 'LanguageController@handle')->name('changeLang');
 
 });
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('fire-event', function () {
     event(new App\Events\TestEvent());
 });

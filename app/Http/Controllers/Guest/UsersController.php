@@ -101,9 +101,9 @@ class UsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        $user = $this->repository->with(['projects','skills','posts'])->findByField('slug',$id);
+        $user = $this->repository->with(['projects','skills','posts'])->findByField('slug',$slug);
 
         if (request()->wantsJson()) {
 
@@ -111,8 +111,8 @@ class UsersController extends Controller
                 'data' => $user,
             ]);
         }
-
-        return view('users.show', compact('user'));
+        dd($user->name);
+        return view('guest.members.show', compact('user'));
     }
 
 

@@ -235,6 +235,7 @@ return [
         'Image'        => Intervention\Image\Facades\Image::class,
         'Debugbar'     => Barryvdh\Debugbar\Facade::class,
         'Analytics'    => Spatie\Analytics\AnalyticsFacade::class,
+        'RandomColor'  => App\Helpers\RandomColorHelper::class,
 
     ],
 
