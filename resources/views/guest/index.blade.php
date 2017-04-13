@@ -8,7 +8,7 @@
 @section('content')
 <div class="main" role="main">
     @component('guest.components.slider')
-  @endcomponent
+    @endcomponent
     <div class="home-intro">
         <div class="container">
             <div class="row">
@@ -117,7 +117,7 @@
                                 Software Engineer
                             </h4>
                             <p>
-                                Develope, implement and maintain system.
+                                Develop, implement and maintain system.
                             </p>
                         </div>
                     </div>
@@ -237,11 +237,7 @@
                     <div class="col-md-6">
                         <div class="recent-posts push-bottom">
                             <h2>
-                                Latest
-                                <strong>
-                                    Blog
-                                </strong>
-                                Posts
+                                Latest<strong>Blog</strong>Posts
                             </h2>
                             <div class="row">
                                 <div class="owl-carousel" data-plugin-options='{"items": 1}'>
@@ -253,10 +249,7 @@
                     </div>
                     <div class="col-md-6">
                         <h2>
-                            <strong>
-                                Meet
-                            </strong>
-                            Our founder
+                            <strong>Meet</strong>Our founder
                         </h2>
                         <div class="row">
                             <div class="owl-carousel push-bottom" data-plugin-options='{"items": 1}'>
@@ -300,12 +293,8 @@
                                                 </img>
                                             </div>
                                             <p>
-                                                <strong>
-                                                    Trinh Bao Ngoc
-                                                </strong>
-                                                <span>
-                                                    FIT - Vice
-                                                </span>
+                                                <strong>Trinh Bao Ngoc</strong>
+                                                <span>FIT - Vice</span>
                                             </p>
                                         </div>
                                     </div>
@@ -322,10 +311,7 @@
             <div class="row center">
                 <div class="col-md-12">
                     <h2 class="shorter word-rotator-title push-top">
-                        Our
-                        <strong>
-                            Portfolio
-                        </strong>
+                        Our<strong>Portfolio</strong>
                     </h2>
                     <p class="lead push-bottom">
                         Check out what we have been doing
@@ -344,14 +330,8 @@
                 <div class="row">
                     <div class="center">
                         <h3>
-                            Hanusoft is
-                            <strong>
-                                everything
-                            </strong>
-                            you need to create an
-                            <strong>
-                                awesome
-                            </strong>
+                            Hanusoft is<strong>everything</strong>
+                            you need to create an<strong>awesome</strong>
                             website!
                             <a class="btn btn-lg btn-primary" data-appear-animation="bounceIn" href="#" target="_blank">
                                 Contact us Now!

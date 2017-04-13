@@ -19,7 +19,12 @@ class Skill extends Model implements Transformable
 
     public function users()
     {
-        return $this->belongsToMany(User::class)->withPivot('value');
+        return $this->morphedByMany(User::class, 'skillable')->withPivot('value');
+    }
+
+    public function projects()
+    {
+        return $this->morphedByMany(Project::class, 'skillable');
     }
 
 }
