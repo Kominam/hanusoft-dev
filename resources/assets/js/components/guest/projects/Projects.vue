@@ -1,7 +1,7 @@
 <template lang="html">
  	<ul class="portfolio-list sort-destination full-width" data-sort-id="portfolio">
-        <Project v-for="project in projects" :project="project"></Project>
-    </ul>
+    <Project v-for="project in projects" :project="project"></Project>
+  </ul>
 </template>
 <script>
   import Project from './Project.vue';

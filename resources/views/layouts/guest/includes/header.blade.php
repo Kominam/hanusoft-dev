@@ -29,11 +29,11 @@
         </li>
         <li>
           <form action="{{ route('changeLang') }}" class="form-lang" method="post">
-                      <select name="locale" onchange='this.form.submit();'>
-                          <option value="en">English</option>
-                          <option value="vn"{{ Lang::locale() === 'vn' ? 'selected' : '' }}>Vietnam</option>
-                      </select>
-                      {{ csrf_field() }}
+            <select name="locale" onchange='this.form.submit();'>
+              <option value="en">English</option>
+              <option value="vn"{{ Lang::locale() === 'vn' ? 'selected' : '' }}>Vietnam</option>
+            </select>
+            {{ csrf_field() }}
           </form>
         </li>
       </ul>

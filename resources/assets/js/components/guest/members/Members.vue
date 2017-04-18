@@ -1,7 +1,7 @@
 <template>
-	 <ul class="team-list sort-destination" data-sort-id="team">
+	<ul class="team-list sort-destination" data-sort-id="team">
 	 	<Member v-for="member in members" :member="member"></Member>
-	 </ul>
+	</ul>
 </template>
 
 <script>

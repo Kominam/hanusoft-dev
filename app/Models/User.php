@@ -46,7 +46,7 @@ class User extends Authenticatable implements Transformable
 
     public function skills()
     {
-        return $this->belongsToMany(Skill::class)->withPivot('value');
+        return $this->morphToMany(Skill::class, 'skillable')->withPivot('value');
     }
 
     public function getAvatarImageAttribute($value)

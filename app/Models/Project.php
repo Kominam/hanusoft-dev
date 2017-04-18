@@ -76,6 +76,11 @@ class Project extends Model implements Transformable
         return $this->belongsToMany(User::class);
     }
 
+    public function skills()
+    {
+        return $this->morphToMany(Skill::class, 'skillable');
+    }
+
     public function phases()
     {
         return $this->hasMany(Phase::class);
